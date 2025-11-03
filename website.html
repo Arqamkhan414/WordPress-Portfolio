@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>WordPress Website Portfolio - Muhammad Arqam</title>
+<style>
+
+/* Brown-Gray Minimalist Portfolio Theme */
+:root{
+  --bg:#f5f3f2;
+  --card:#ffffff;
+  --muted:#7a7068;
+  --accent:#b07a3a; /* brown/gold */
+  --gray:#6b6b6b;
+  --radius:14px;
+  --maxw:1100px;
+  --font-sans: 'Poppins', Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{font-family:var(--font-sans);background:var(--bg);color:#222;margin:0;padding:40px 20px;display:flex;justify-content:center}
+.container{max-width:var(--maxw);width:100%}
+
+/* Card */
+.card{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 6px 20px rgba(16,24,40,0.06);border:1px solid rgba(0,0,0,0.04);}
+
+/* Header */
+.header{display:flex;gap:24px;align-items:center}
+.header-left p{margin:0;color:var(--muted);letter-spacing:1px;font-size:13px}
+.header-left h1{margin:8px 0 0;font-size:36px;color:#111}
+.header-left p.lead{margin-top:12px;color:var(--gray);max-width:620px;line-height:1.5}
+
+/* Button */
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;background:var(--accent);color:white;text-decoration:none;font-weight:600;margin-right:10px;}
+
+/* Two-column */
+.columns{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:20px}
+.about{}
+
+.services .service{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #f0ece9}
+.service .badge{width:48px;height:48px;border-radius:10px;background:rgba(176,122,58,0.12);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+
+/* Projects grid */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.project{border-radius:12px;overflow:hidden;background:var(--card);box-shadow:0 4px 14px rgba(16,24,40,0.04);}
+.project img{width:100%;height:160px;object-fit:cover;display:block}
+.project .pinfo{padding:14px}
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.testimonial{padding:18px;border-radius:12px;background:var(--card);}
+
+/* Pricing */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.pricing .plan{padding:18px;border-radius:12px;text-align:center;background:var(--card)}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px;}
+.footer{margin-top:28px;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .columns{grid-template-columns:1fr;}
+  .projects{grid-template-columns:1fr;}
+  .testimonials{grid-template-columns:1fr;}
+  .pricing{grid-template-columns:1fr;}
+  .contact{grid-template-columns:1fr;}
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Cover Card -->
+    <section class="card header">
+      <div class="header-left">
+        <p>PORTFOLIO</p>
+        <h1>WordPress Website Portfolio</h1>
+        <p class="lead">Designed & Developed by <strong>Muhammad Arqam</strong>. Clean, minimalist, and conversion-focused WordPress websites — responsive, SEO-optimized, and easy to manage.</p>
+        <div style="margin-top:14px;">
+          <a class="btn" href="#contact">Hire Me</a>
+          <a class="btn" style="background:#fff;color:#333;border:1px solid #eee;text-decoration:none" href="#projects">View Projects</a>
+        </div>
+      </div>
+      <div style="margin-left:auto;max-width:420px;">
+        <img src="cover.jpg" alt="cover" style="width:100%;border-radius:12px;object-fit:cover;display:block">
+      </div>
+    </section>
+
+    <!-- About & Services -->
+    <section class="columns" aria-label="About and services">
+      <div class="card about">
+        <h2>About Me</h2>
+        <p style="color:var(--gray)">Hi, I’m <strong>Muhammad Arqam</strong> — a WordPress designer & developer. I build responsive, fast, and SEO-friendly websites for businesses, freelancers, and online stores. My focus is on performance, conversion-driven design, and maintainability.</p>
+        <ul style="margin-top:14px;color:var(--gray)">
+          <li>• WordPress Development</li>
+          <li>• Elementor / Gutenberg</li>
+          <li>• WooCommerce Setup</li>
+          <li>• SEO & Speed Optimization</li>
+        </ul>
+      </div>
+      <aside class="card services">
+        <h3>Services</h3>
+        <div class="service">
+          <div class="badge">W</div>
+          <div>
+            <div style="font-weight:600">WordPress Website</div>
+            <div style="color:var(--muted)">Custom theme or page builder</div>
+          </div>
+        </div>
+        <div class="service">
+          <div class="badge">E</div>
+          <div>
+            <div style="font-weight:600">E-commerce (WooCommerce)</div>
+            <div style="color:var(--muted)">Products, payments, shipping</div>
+          </div>
+        </div>
+        <div class="service">
+          <div class="badge">S</div>
+          <div>
+            <div style="font-weight:600">SEO & Performance</div>
+            <div style="color:var(--muted)">Speed, schema, on-page SEO</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="card" style="margin-top:20px">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <img src="project1.jpg" alt="project 1">
+          <div class="pinfo">
+            <h3>Business Website</h3>
+            <p style="color:var(--muted);margin:6px 0">Client: Margarita Perez</p>
+            <p style="color:var(--gray);font-size:14px">Responsive business site with custom homepage, speed optimization, and contact integration.</p>
+          </div>
+        </article>
+        <article class="project">
+          <img src="project2.jpg" alt="project 2">
+          <div class="pinfo">
+            <h3>E-commerce Store</h3>
+            <p style="color:var(--muted);margin:6px 0">Client: Liceria & Co.</p>
+            <p style="color:var(--gray);font-size:14px">WooCommerce store with product pages, payment gateway, and inventory setup.</p>
+          </div>
+        </article>
+        <article class="project">
+          <img src="project3.jpg" alt="project 3">
+          <div class="pinfo">
+            <h3>Portfolio Website</h3>
+            <p style="color:var(--muted);margin:6px 0">Client: Studio Shodwe</p>
+            <p style="color:var(--gray);font-size:14px">Minimal portfolio design focused on visual presentation and fast loading.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="card" style="margin-top:20px">
+      <h2>Testimonials</h2>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p style="color:var(--gray)">“Working with Arqam transformed our website — faster, cleaner, and more clients.”</p>
+          <p style="margin-top:8px;color:var(--muted);font-weight:600">— Rosa Maria Aguado</p>
+        </div>
+        <div class="testimonial">
+          <p style="color:var(--gray)">“Professional, timely, and excellent communication. Highly recommended.”</p>
+          <p style="margin-top:8px;color:var(--muted);font-weight:600">— Sebastian Bennett</p>
+        </div>
+        <div class="testimonial">
+          <p style="color:var(--gray)">“Great design sense and attention to detail. Our conversions improved.”</p>
+          <p style="margin-top:8px;color:var(--muted);font-weight:600">— Korina Villanueva</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="card" style="margin-top:20px">
+      <h2>Pricing</h2>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Basic</h3>
+          <p style="font-size:28px;font-weight:700;margin:8px 0">$200</p>
+          <ul style="color:var(--muted);text-align:left;display:inline-block;margin:0 auto;">
+            <li>• Basic site (5 pages)</li>
+            <li>• Responsive design</li>
+            <li>• Basic SEO</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Standard</h3>
+          <p style="font-size:28px;font-weight:700;margin:8px 0">$500</p>
+          <ul style="color:var(--muted);text-align:left;display:inline-block;margin:0 auto;">
+            <li>• Up to 10 pages</li>
+            <li>• WooCommerce setup</li>
+            <li>• Speed optimization</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <h3>Premium</h3>
+          <p style="font-size:28px;font-weight:700;margin:8px 0">$1000</p>
+          <ul style="color:var(--muted);text-align:left;display:inline-block;margin:0 auto;">
+            <li>• Custom theme</li>
+            <li>• Advanced SEO & schema</li>
+            <li>• 3 months support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card" style="margin-top:20px">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div>
+          <p style="font-weight:600">Email</p>
+          <p style="color:var(--muted)">arqam@example.com</p>
+          <p style="margin-top:12px;font-weight:600">Website</p>
+          <p style="color:var(--muted)">yourwebsite.com</p>
+          <p style="margin-top:12px;font-weight:600">Social</p>
+          <p style="color:var(--muted)">@yourhandle</p>
+        </div>
+        <div>
+          <form onsubmit="alert('Message sent (demo)');return false;">
+            <div style="margin-bottom:8px">
+              <label style="display:block;font-weight:600">Name</label>
+              <input style="width:100%;padding:10px;border-radius:10px;border:1px solid #eee" placeholder="Your name" required />
+            </div>
+            <div style="margin-bottom:8px">
+              <label style="display:block;font-weight:600">Email</label>
+              <input style="width:100%;padding:10px;border-radius:10px;border:1px solid #eee" placeholder="you@example.com" required />
+            </div>
+            <div style="margin-bottom:8px">
+              <label style="display:block;font-weight:600">Message</label>
+              <textarea style="width:100%;padding:10px;border-radius:10px;border:1px solid #eee" rows="4" placeholder="Project brief or question"></textarea>
+            </div>
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Designed & Developed by Muhammad Arqam • © 2025</p>
+    </footer>
+  </div>
+</body>
+</html>
